@@ -16,7 +16,7 @@ namespace rmcgirr83\upcomingbirthdays;
 class ext extends \phpbb\extension\base
 {
 	const PHPBB_MIN_VERSION = '3.3.19';
-	const PHP_MIN_VERSION = '8.3.36';
+	const PHP_MIN_VERSION = '8.1.0';
 	/**
 	 * Check whether the extension can be enabled.
 	 * The current phpBB and PHP version should meet or
@@ -51,12 +51,12 @@ class ext extends \phpbb\extension\base
 	}
 
 	/**
-	 * Requires PHP 8.3.36 due to security fixes.
+	 * Requires PHP 8.1.0 or later.
 	 *
 	 * @return bool
 	 */
 	protected function check_php_version()
 	{
-		return PHP_VERSION_ID >= 80336;
+		return PHP_VERSION_ID >= 80100;
 	}
 }
